@@ -14,6 +14,7 @@
         - average_relevance = df.groupby('qid')['score'].mean().reset_index(name='average_score')
     - Based on real qrels (QDR)
     - Based on synthetic qrels (QDS)
+    - There is only one concern regarding query difficulty that we need to check. The way that we considered a query difficult may not be accurate, so we can check this if we can find a better way.
 - __Query Words (QW)__: Number of words in query
 - __DL__: Average documents length for each query based on the qrels
 - __isGPT4__ indicating if a query is generated using GPT-4 model -> updated to
@@ -40,7 +41,7 @@
 - Evaluation per query per run: We have different systems and different evaluation per query
 - Based on NDCGEVAL file we can create a file that contains run_id, qid, NDCG@10, query_inof, doc_info
 
-### Discussion with Emine
+## Discussion with Emine
 - Perofrmance differecnes factor evaluation:
     - We cannot compute the performance differences on synthetic vs real queries, coz they are different
     - Can be only done on real quereis with synthetic vs nist judgments (Case 1)
@@ -48,12 +49,12 @@
 - Plot for QL -> Box plot
 - Query Difficulty based on the system performance
 
-### Judgment Analysis
+## Judgment Analysis
 
 - Wrong judgments -> Query length and document length
 - LLM prefers to give higher scores to documents that have higher length, the ones LLM prefers to give lower scores are shorter in length. This happens to both real and synthetic quereis, where the average length for when LLM prefer lower score than NIST is 20.01 and when LLM prefer higher score that NIST is 51.00.
 
-## Mixed-Effect Model Analysis
+## Extra Exp. 1: Mixed-Effect Model Analysis
 
 - Real vs. Synthetic Judgments:
     - \+ isGPT4 (1)
@@ -68,3 +69,5 @@ qid52|   1   |   s52 |         XXX       |
 qid53|   1   |   s53 |         XXX       |
 ...
 
+## TODOs:
+1. Adding the reuslts for mAP
