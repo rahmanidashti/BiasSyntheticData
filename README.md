@@ -2,6 +2,8 @@
 
 ## Experimental Setup
 
+- QW, PL (DL), isSynthetic, 
+
 ### Factors
 
 #### Query
@@ -16,7 +18,8 @@
     - Based on synthetic qrels (QDS)
     - There is only one concern regarding query difficulty that we need to check. The way that we considered a query difficult may not be accurate, so we can check this if we can find a better way.
 - __Query Words (QW)__: Number of words in query
-- __DL__: Average documents length for each query based on the qrels
+- __PL__: Average documents length for each query based on the qrels
+- __QT__: Query type that indicate what is the source of the guqery generation
 - __isGPT4__ indicating if a query is generated using GPT-4 model -> updated to
     - This factor might not make sense as we are splitting the data into real vs synthetic queries, so when we are fitting the model for the analysis the factor has the same value for all the cases.
 - __Synthetic__ indicates if a query is synthetic query, generated using T5 + GPT4
