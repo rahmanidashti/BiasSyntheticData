@@ -7,7 +7,8 @@
 ### Factors
 
 #### Query
-- __Query Length (QL)__: Short or long query (TREC DL 2021 Overview Paper): Queries were split into two strata based on their length, where queries containing more than or equal to 10 words were put into the stratum corresponding to long queries and the rest of the queries were put into the stratum corresponding to short queries
+- __Query Words (QW)__: Number of words in query which indicate if a query is long or short
+
 - __Query Difficulty (QDx)__: Can we define it based on the number of relevant docs per query?
     - Number of Highly Relevant Passages: Count the number of passages with high relevance scores (e.g., score of 3). Fewer highly relevant passages suggest higher difficulty. 
         - The number of relevant passage / The number of qrels for the qid: higer -> low difficulty, higher -> high difficulty
@@ -17,12 +18,10 @@
     - Based on real qrels (QDR)
     - Based on synthetic qrels (QDS)
     - There is only one concern regarding query difficulty that we need to check. The way that we considered a query difficult may not be accurate, so we can check this if we can find a better way.
-- __Query Words (QW)__: Number of words in query
-- __PL__: Average documents length for each query based on the qrels
-- __QT__: Query type that indicate what is the source of the guqery generation
-- __isGPT4__ indicating if a query is generated using GPT-4 model -> updated to
-    - This factor might not make sense as we are splitting the data into real vs synthetic queries, so when we are fitting the model for the analysis the factor has the same value for all the cases.
-- __Synthetic__ indicates if a query is synthetic query, generated using T5 + GPT4
+
+- __APL__: Average passages length for each query based on the qrels
+
+- __QT__: Query type that indicate what is the source of the guqery generation: (1) human, (2) T5, (3) GPT4
 
 #### Model
 - __LLM__: Model Type
@@ -32,7 +31,7 @@
 - __No. of Model Variants:__ Referes to the number of different models in the proposed pipeline (e.g., BM25 for retriveal, GPT-4 for ranking)
 
 #### Document
-- [x] Document Lenght: The number of tokens/words in a passage/doc
+- __PW__: Document Lenght: The number of tokens/words in a passage/doc
 
 ### Files
 - __query_to_info__: a file from qid to query charactrsitcs

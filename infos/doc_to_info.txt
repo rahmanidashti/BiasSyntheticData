@@ -1,4 +1,4 @@
-docid	DW
+docid	PW
 msmarco_passage_00_257661787	56
 msmarco_passage_00_257662430	43
 msmarco_passage_00_257664103	46

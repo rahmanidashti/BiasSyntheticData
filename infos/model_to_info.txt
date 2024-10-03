@@ -1,4 +1,4 @@
-run_id	LLM	isLLM	pipeline
+run_id	ST	isLLM	pipeline
 colbertv2	Other	0	1
 cip_run_7	GPT	1	2
 cip_run_1	T5+GPT	1	3
