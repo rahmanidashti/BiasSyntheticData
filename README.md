@@ -4,24 +4,19 @@
 
 ### Factors
 
-#### Query Level
+#### Query Level: 'infos/query_to_info.txt'
 - __Query Words (QW)__: Number of words in query which indicate if a query is long or short
 - __APL__: Average passages length for each query based on the qrels
 - __QT__: Query type that indicate what is the source of the guqery generation: (1) human, (2) T5, (3) GPT4
 
-#### Model Level
+#### Model Level: 'infos/model_to_info.txt'
 - __ST__: System Type
 - __isLLM__: referes to if the pipeline contains an LLM in its model
     - This factor is highly correlated with LLM or model type factor and should not be considered.
 - __MN__: No. of Model Variants, referes to the number of different models in the proposed pipeline (e.g., BM25 for retriveal, GPT-4 for ranking)
 
-#### Document Level
-- __PW__: Document Lenght: The number of tokens/words in a passage/doc
-
-#### Factors Files
-- __query_to_info__: a file from qid to query charactrsitcs
-- __document_to_info__: a file from docid to passage charactristics
-- __model_to_info__: a file form models to model pipeline information
+#### Passage Level: 'infos/pass_to_info.txt'
+- __PW__: Passage Lenght: The number of tokens/words in a passage
 
 ## Run Evaluation
 - Evaluation per query per run: We have different systems and different evaluation per query
