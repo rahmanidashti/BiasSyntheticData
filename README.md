@@ -5,9 +5,14 @@
 ### Factors
 
 #### Query Level: 'infos/query_to_info.txt'
-- __Query Words (QW)__: Number of words in query which indicate if a query is long or short
-- __APL__: Average passages length for each query based on the qrels
-- __QT__: Query type that indicate what is the source of the guqery generation: (1) human, (2) T5, (3) GPT4
+- __qid__:
+- __Query Length (QL)__: indicate if query is long (1, no. of words > 10) or short (0, num. of words <= 10)
+- __Query Difficulty Real (QDR)__:
+- __Query Difficulty Synthetic (QDS)__:
+- __Query Word (QW)__: number of words in the query -- indicating query length
+- __Document Length (DL)__: Average passages length for each query based on the qrels
+- __Synthetic__: 1 if query is synthetic (T5 or GPT-4 generated quereis)
+- __isGPT4__: it is 1 if the query is GPT4-generated
 
 #### Model Level: 'infos/model_to_info.txt'
 - __ST__: System Type
