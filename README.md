@@ -28,10 +28,11 @@ TREC Deep Learning Track 2023
 
 ## Notebooks
 - [creating-files.ipynb](creating-files.ipynb): To create factors data for linear mixed-effect model analysis.
-- [query-analysis.ipynb](#): To analyse the queries characteristics
-- [judgement-analysis.ipynb](#): To create Bland-Altman plot
-- [labels-analysis.ipynb](#): To analyse the judgements distrubutions based on the level of judge and the source
-- [mixed-effect-analysis.ipynb](#):
+- [query-analysis.ipynb](query-analysis.ipynb): To analyse the queries characteristics
+- [judgement-analysis.ipynb](judgement-analysis.ipynb): To create Bland-Altman plot
+- [labels-analysis.ipynb](labels-analysis.ipynb): To analyse the judgements distrubutions based on the level of judge and the source
+- [mixed-effect-analysis.ipynb](mixed-effect-analysis.ipynb): To run linear mixed-effect model analysis
+- [synthetic-qrel-analysis.ipynb](synthetic-qrel-analysis.ipynb): To run system ranking analysis
 
 ## Cite
 ```
