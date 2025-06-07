@@ -2,14 +2,17 @@
 
 ## Experimental Setup
 
+### Dataset
+TREC Deep Learning Track 2023
+
 ### Factors
 
 #### Query Level: 'infos/query_to_info.txt'
-- __qid__:
-- __Query Length (QL)__: indicate if query is long (1, no. of words > 10) or short (0, num. of words <= 10)
-- __Query Difficulty Real (QDR)__:
-- __Query Difficulty Synthetic (QDS)__:
-- __Query Word (QW)__: number of words in the query -- indicating query length
+- __qid__: Query ID
+- __Query Length (QL)__: Indicate if query is long (1, no. of words > 10) or short (0, num. of words <= 10)
+- __Query Difficulty Real (QDR)__: Qeury difficulty for real query
+- __Query Difficulty Synthetic (QDS)__: Qeury difficulty for synthetic query
+- __Query Word (QW)__: Number of words in the query -- indicating query length
 - __Document Length (DL)__: Average passages length for each query based on the qrels
 - __Synthetic__: 1 if query is synthetic (T5 or GPT-4 generated quereis)
 - __isGPT4__: it is 1 if the query is GPT4-generated
@@ -23,10 +26,14 @@
 #### Passage Level: 'infos/pass_to_info.txt'
 - __PW__: Passage Lenght: The number of tokens/words in a passage
 
-## Run Evaluation
-- Evaluation per query per run: We have different systems and different evaluation per query
-- Based on NDCGEVAL file we can create a file that contains run_id, qid, NDCG@10, query_inof, doc_info
+## Notebooks
+- [creating-files.ipynb](creating-files.ipynb): To create factors data for linear mixed-effect model analysis.
+- [query-analysis.ipynb](#): To analyse the queries characteristics
+- [judgement-analysis.ipynb](#): To create Bland-Altman plot
+- [labels-analysis.ipynb](#): To analyse the judgements distrubutions based on the level of judge and the source
+- [mixed-effect-analysis.ipynb](#):
 
-## Judgment Analysis
-- Wrong judgments -> Query length and document length
-- __Needs to be Double-Checked__:LLM prefers to give higher scores to documents that have higher length, the ones LLM prefers to give lower scores are shorter in length. This happens to both real and synthetic quereis, where the average length for when LLM prefer lower score than NIST is 20.01 and when LLM prefer higher score that NIST is 51.00.
+## Cite
+```
+TBA
+```
