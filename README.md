@@ -36,5 +36,11 @@ TREC Deep Learning Track 2023
 
 ## Cite
 ```
-TBA
+@inproceedings{rahmani2025towards,
+  title={Towards Understanding Bias in Synthetic Data for Evaluation},
+  author={Rahmani, Hossein A and Ramineni, Varsha and Yilmaz, Emine and Craswell, Nick and Mitra, Bhaskar},
+  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},
+  pages={5166--5170},
+  year={2025}
+}
 ```
